@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const myconnection = require('express-myconnection');
+const cors = require('cors');
 
 const routesCliente = require('./routesCliente');
 const routesComentarios = require('./routesComentarios');
@@ -8,6 +9,7 @@ const routesVideojuego = require('./routesVideojuegos');
 const routesCompra = require('./routesCompra');
 
 const app = express();
+app.use(cors({origin: ['http://127.0.0.1:5500']}));
 app.set('port',process.env.port || 9000);
 const dbOptions = {
     host:'localhost',
