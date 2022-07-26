@@ -7,6 +7,7 @@ const routesCliente = require('./routesCliente');
 const routesComentarios = require('./routesComentarios');
 const routesVideojuego = require('./routesVideojuegos');
 const routesCompra = require('./routesCompra');
+const routesCarrito = require('./routesCarrito');
 
 const app = express();
 app.use(cors({origin: ['http://127.0.0.1:5500']}));
@@ -29,6 +30,7 @@ app.use('/comentarios', routesComentarios);
 app.use('/cliente', routesCliente);
 app.use('/videojuego', routesVideojuego);
 app.use('/compra', routesCompra);
+app.use('/carrito', routesCarrito);
 
 //Servidor corriendo **************************************************
 app.listen(app.get('port'), ()=>{
