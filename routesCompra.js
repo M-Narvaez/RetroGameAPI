@@ -40,7 +40,7 @@ routes.get('/:id', (req, res)=>{
 routes.post('/', (req, res)=>{
     req.getConnection((error, connection)=>{
         if (error) return res.send('Hubo un Error: ',err);
-        connection.query('INSERT INTO compra set ?', [req.body], (err, rows)=>{
+        connection.query('CALL Agregra_compra(?,? , ?, ?, ?, ?); "', [req.body.Id, req.body.Username, req.body.codVideojuego, req.body.Cantidad, '26/17/2022', 'S'], (err, rows)=>{
             if(err) return res.send(err);
 
             res.send('OK!');
