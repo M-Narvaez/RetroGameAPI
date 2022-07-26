@@ -27,7 +27,7 @@ routes.post('/', (req, res)=>{
 routes.delete('/:id', (req, res)=>{
     req.getConnection((error, connection)=>{
         if (error) return res.send('Hubo un Error: ',err);
-        connection.query('DELETE FROM carrito WHERE id = ?', [req.params.id], (err, rows)=>{
+        connection.query('DELETE FROM carrito WHERE codVideojuego = ?', [req.params.id], (err, rows)=>{
             if(err) return res.send(err);
 
             res.send('OK!');
