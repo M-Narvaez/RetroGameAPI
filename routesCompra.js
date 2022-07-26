@@ -13,6 +13,18 @@ routes.get('/username/:username', (req, res)=>{
     });
 });
 
+routes.get('/estado/:value', (req, res)=>{
+    req.getConnection((error, connection)=>{
+        if (error) return res.send('Hubo un Error: ',error);
+
+        connection.query('SELECT * FROM compra WHERE formaPago = ?', [req.params.value], (err, rows)=>{
+            if(err) return res.send(err);
+
+            res.json(rows);
+        });
+    });
+});
+
 routes.get('/:id', (req, res)=>{
     req.getConnection((error, connection)=>{
         if (error) return res.send('Hubo un Error: ',error);

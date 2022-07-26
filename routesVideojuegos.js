@@ -13,6 +13,18 @@ routes.get('/', (req, res)=>{
     });
 });
 
+routes.get('/destacados', (req, res)=>{
+    req.getConnection((error, connection)=>{
+        if (error) return res.send('Hubo un Error: ',error);
+
+        connection.query('SELECT * FROM `videojuegos` limit 3;', (err, rows)=>{
+            if(err) return res.send(err);
+
+            res.json(rows); 
+        });
+    });
+});
+
 routes.get('/:id', (req, res)=>{
     req.getConnection((error, connection)=>{
         if (error) return res.send('Hubo un Error: ',error);
@@ -25,17 +37,6 @@ routes.get('/:id', (req, res)=>{
     });
 });
 
-routes.get('/destacados', (req, res)=>{
-    req.getConnection((error, connection)=>{
-        if (error) return res.send('Hubo un Error: ',error);
-
-        connection.query('SELECT * FROM videojuegos limit 3', (err, rows)=>{
-            if(err) return res.send(err);
-
-            res.json(rows);
-        });
-    });
-});
 
 routes.post('/', (req, res)=>{
     req.getConnection((error, connection)=>{
