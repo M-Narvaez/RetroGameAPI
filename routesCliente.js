@@ -28,7 +28,7 @@ routes.get('/:id', (req, res)=>{
 routes.post('/', (req, res)=>{
     req.getConnection((error, connection)=>{
         if (error) return res.send('Hubo un Error: ',err);
-        connection.query('INSERT INTO cliente set ?', [req.body], (err, rows)=>{
+        connection.query('CALL  Add_usuario(?, ?, ?);', [req.body.Username, req.body.Email, req.body.Contraseña], (err, rows)=>{
             if(err) return res.send(err);
 
             res.send('OK!');
