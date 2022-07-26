@@ -1,0 +1,391 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--===============  Icono de Página ===============-->
+        <link rel="shortcut icon" href="assets/img/Retro_Game.png" type="image/x-icon">
+
+        <!--=============== Boxicons ===============-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+        <!--=============== Swiper CSS ===============--> 
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Retro Game - Tienda de VideoJuegos Online</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <i class='bx bx-game'></i></i> RETRO GAME
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#destacados" class="nav__link">Destacados</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./assets/page/videojuegos.html" class="nav__link">Videojuegos</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="./assets/page/Historial de compras.html" class="nav__link">Historial de compras</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav__close" id="nav-close">
+                        <i class='bx bx-x' ></i>
+                    </div>
+                </div>
+
+                <div class="nav__btns">
+
+                    <div class="nav__shop" id="cart-shop">
+                        <i class='bx bx-shopping-bag' ></i>
+                    </div>
+
+                    <div class="nav__iniciar-sesion" id="iniciar-sesion">
+                        <a href="./assets/page/Login.html" class='bx bx-user-circle'></a>
+                    </div>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-grid-alt' ></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== Carro de compras ====================-->
+        <div class="cart" id="cart">
+            <i class='bx bx-x cart__close' id="cart-close"></i>
+
+            <h2 class="cart__title-center">Mi Carrito de Compras</h2>
+
+            <div class="cart__container">
+                <article class="cart__card">
+                    <div class="cart__box">
+                        <img src="assets/img/FARCRY6.jpg" alt="" class="cart__img">
+                    </div>
+
+                    <div class="cart__details">
+                        <h3 class="cart__title">Farcry6</h3>
+                        <span class="cart__price">$105.900</span>
+
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-minus' ></i>
+                                </span>
+
+                                <span class="cart__amount-number">1</span>
+
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-plus' ></i>
+                                </span>
+                            </div>
+
+                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="cart__card">
+                    <div class="cart__box">
+                        <img src="assets/img/Call of Duty.jpg" alt="" class="cart__img">
+                    </div>
+
+                    <div class="cart__details">
+                        <h3 class="cart__title">Call of Duty</h3>
+                        <span class="cart__price">$109.900</span>
+
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-minus' ></i>
+                                </span>
+
+                                <span class="cart__amount-number">1</span>
+
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-plus' ></i>
+                                </span>
+                            </div>
+
+                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cart__card">
+                    <div class="cart__box">
+                        <img src="assets/img/Battlefield 1.jpg" alt="" class="cart__img">
+                    </div>
+
+                    <div class="cart__details">
+                        <h3 class="cart__title">Battlefield</h3>
+                        <span class="cart__price">$98.900</span>
+
+                        <div class="cart__amount">
+                            <div class="cart__amount-content">
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-minus' ></i>
+                                </span>
+
+                                <span class="cart__amount-number">1</span>
+
+                                <span class="cart__amount-box">
+                                    <i class='bx bx-plus' ></i>
+                                </span>
+                            </div>
+
+                            <i class='bx bx-trash-alt cart__amount-trash' ></i>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="cart__prices">
+                <span class="cart__prices-item">3 Elementos</span>
+                <span class="cart__prices-total">$314.700</span>
+            </div>
+        </div>
+
+        <!--==================== Main ====================-->
+        <main class="main">
+            <!--==================== Home ====================-->
+            <section class="home" id="home">
+                <div class="home__container container grid">
+                    <div id="imagenDestacada" class="home__img-bg">
+                        <!-- <img src="assets/img/grand_theft_auto_v.webp" alt="" class="home__img"> -->
+                    </div>
+    
+                    <div class="home__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="home__social-link">
+                            Facebook
+                        </a>
+                        <a href="https://twitter.com/" target="_blank" class="home__social-link">
+                            Twitter
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank" class="home__social-link">
+                            Instagram
+                        </a>
+                    </div>
+    
+                    <div id="juegoDestacado" class="home__data">
+                        <!-- <h1 class="home__title">GRAND THEFT AUTO V</h1> -->
+                        <!-- <p class="home__description">
+                            Es un videojuego de acción-aventura de mundo abierto desarrollado por el estudio Rockstar North y distribuido por Rockstar Games.
+                        </p> -->
+                        <!-- <span class="home__price">$109.900</span> -->
+
+                        <div class="home__btns">
+                            <a href="#" class="button button--gray button--small">
+                                Más Info...
+                            </a>
+
+                            <button class="button home__button">AÑADIR AL CARRITO</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== Destacados ====================-->
+            <section class="featured section container" id="destacados">
+                <h2 class="section__title">
+                    Videojuegos Destacados
+                </h2>
+
+                <div id="videojuegosDestacados" class="featured__container grid">
+                    <article class="featured__card">
+                        <span class="featured__tag">Venta</span>
+
+                        <img src="assets/img/Minecraft.png" alt="" class="featured__img">
+
+                        <div class="featured__data">
+                            <h3 class="featured__title">Minecraft</h3>
+                            <span class="featured__price">$145.000</span>
+                        </div>
+
+                        <button class="button featured__button">AÑADIR AL CARRITO</button>
+                    </article>
+
+                    <!-- <article class="featured__card">
+                        <span class="featured__tag">Venta</span>
+
+                        <img src="assets/img/Call of Duty.jpg" alt="" class="featured__img">
+
+                        <div class="featured__data">
+                            <h3 class="featured__title">Call of Duty</h3>
+                            <span class="featured__price">$114.900</span>
+                        </div>
+
+                        <button class="button featured__button">AÑADIR AL CARRITO</button>
+                    </article> -->
+
+                    <article class="featured__card">
+                        <span class="featured__tag">Venta</span>
+
+                        <img src="assets/img/Fortnite.jpg" alt="" class="featured__img">
+
+                        <div class="featured__data">
+                            <h3 class="featured__title">Fortnite</h3>
+                            <span class="featured__price">$89.900</span>
+                        </div>
+
+                        <button class="button featured__button">AÑADIR AL CARRITO</button>
+                    </article>
+                </div>
+            </section>
+
+            <!--==================== Videojuego Recomendado ====================-->
+            <section class="story section container">
+                <div class="story__container grid">
+                    <div class="story__data">
+                        <h2 class="section__title story__section-title">
+                            ¡Recomendados!
+                        </h2>
+    
+                        <h1 class="story__title">
+                            Videojuegos Recomendados de <br> este año
+                        </h1>
+    
+                        <p class="story__description">
+                            Los últimos y modernos videojuegos de este año, están disponibles en nuestras tiendas, descúbrelos ahora.
+                        </p>
+    
+                        <a href="./assets/page/videojuegos.html" class="button button--small">Descubrir</a>
+                    </div>
+
+                    <div class="story__images">
+                        <img src="assets/img/Mas_Jugados.jpg" alt="" class="story__img">
+                        <div class="story__square"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <!--==================== Boletin informativo ====================-->
+            <section class="newsletter section container">
+                <div class="newsletter__bg grid">
+                    <div>
+                        <h2 class="newsletter__title">Suscríbete a nuestro <br> Boletin informativo</h2>
+                        <p class="newsletter__description">
+                            No te pierdas los descuentos. Suscríbase a nuestro boletín de correo electrónico 
+                            para obtener las mejores ofertas, descuentos, cupones, regalos y mucho más.
+                        </p>
+                    </div>
+
+                    <form action="" class="newsletter__subscribe">
+                        <input type="email" placeholder="Enter your email" class="newsletter__input">
+                        <button class="button">
+                            SUBSCRIBETE
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <h3 class="footer__title">Nuestra información</h3>
+
+                    <ul class="footer__list">
+                        <li>
+                            <a href="tel: +573003964879" class="footer__link">300-396-4879</a>
+                        </li>
+                        <li>
+                            <a href="tel: +573207962137" class="footer__link">320-796-2137</a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Lorica,+C%C3%B3rdoba/@9.2424915,-75.819203,14z/data=!3m1!4b1!4m5!3m4!1s0x8e5998c9c858e5db:0xfb466057428696c4!8m2!3d9.2376398!4d-75.8136245" class="footer__link">Lorica - Cordoba</a>
+                        </li>
+                        <li>
+                            <a href="https://www.unicordoba.edu.co/" class="footer__link">Universidad de Cordoba - Monteria</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__content">
+                    <h3 class="footer__title">Sobre nosotros</h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#" class="footer__link">Centro de Apoyo</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Atención al cliente</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Sobre nosotros</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__link">Derechos de autor</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Videojuegos</h3>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="./assets/page/videojuegos.html" class="footer__link">Grand Theft Auto V</a>
+                        </li>
+                        <li>
+                            <a href="./assets/page/videojuegos.html" class="footer__link">Fifa22</a>
+                        </li>
+                        <li>
+                            <a href="./assets/page/videojuegos.html" class="footer__link">Halo Reach</a>
+                        </li>
+                        <li>
+                            <a href="./assets/page/videojuegos.html" class="footer__link">Mortal Kombat Ultimate</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer__content">
+                    <h3 class="footer__title">Social</h3>
+
+                    <ul class="footer__social">
+                        <a href="https://www.facebook.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+
+                        <a href="https://twitter.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-twitter' ></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                            <i class='bx bxl-instagram' ></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <span class="footer__copy">&#169; RetroGame. Todos los derechos reservados</span>
+        </footer>
+
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
+            <i class='bx bx-up-arrow-alt scrollup__icon' ></i>
+        </a>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/data.js"></script>
+    </body>
+</html>
