@@ -5,7 +5,7 @@ routes.get('/', (req, res)=>{
     req.getConnection((error, connection)=>{
         if (error) return res.send('Hubo un Error: ',error);
 
-        connection.query('SELECT * FROM videojuegos ', (err, rows)=>{
+        connection.query('SELECT * FROM videojuegos', (err, rows)=>{
             if(err) return res.send(err);
 
             res.json(rows);
@@ -18,6 +18,18 @@ routes.get('/:id', (req, res)=>{
         if (error) return res.send('Hubo un Error: ',error);
 
         connection.query('SELECT * FROM videojuegos WHERE codVideojuego = ?', [req.params.id], (err, rows)=>{
+            if(err) return res.send(err);
+
+            res.json(rows);
+        });
+    });
+});
+
+routes.get('/destacados', (req, res)=>{
+    req.getConnection((error, connection)=>{
+        if (error) return res.send('Hubo un Error: ',error);
+
+        connection.query('SELECT * FROM videojuegos limit 3', (err, rows)=>{
             if(err) return res.send(err);
 
             res.json(rows);
