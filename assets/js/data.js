@@ -137,21 +137,13 @@ fetch(`${API_URL}/compra/estado/S`)
 
 function añadirAlCarrito(codigo) {
 
-    let data = {
-        "Username": "Manuel",
-        "codVideojuego": codigo,
-        "Cantidad": 1,
-        "fechaCompra": "2022-07-25T05:00:00.000Z",
-        "formaPago": "S"
-    }
-    console.log(data);
-
-    fetch(`${API_URL}/compra`, {method: 'POST', body: {
-        "Username": "Manuel",
-        "codVideojuego": codigo,
-        "Cantidad": 1,
-        "fechaCompra": "2022-07-25T05:00:00.000Z",
-        "formaPago": "S"
-    }})
-    .then((response) => console.log(response));
+    let data = [{
+        Username: "Luis",
+        codVideojuego: codigo,
+        Cantidad: 1,
+        fechaCompra: new Date(),
+        formaPago: "S"
+    }]
+    console.log(data.json());
+    fetch(`${API_URL}/compra`, {method: 'POST', body: data})
 }
